@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Razor">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+	
+  <PropertyGroup>
+    <!-- NuGet properties-->
+    <Title>The Neari Blog theme</Title>
+    <Description>
+    Orchard Core CMS theme adapted for blogs.</Description>
+    <PackageTags>OrchardCoreCMS Theme </PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="OrchardCore.DisplayManagement" Version="2.2.1" />
+    <PackageReference Include="OrchardCore.Queries" Version="2.2.1" />
+    <PackageReference Include="OrchardCore.ResourceManagement.Abstractions" Version="2.2.1" />
+    <PackageReference Include="OrchardCore.Theme.Targets" Version="2.2.1" />
+  </ItemGroup>
+
+
+
+</Project>

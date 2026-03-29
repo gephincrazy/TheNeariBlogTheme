@@ -1,0 +1,31 @@
+//
+// Colors — Thai Forest Tradition
+//
+
+// Define Grayscale values used in variables before Bootstrap loads
+$gray-900: #2C2C2C;  // deep charcoal
+$gray-700: #37474F;  // slate grey
+$gray-500: #6c757d;
+$gray-300: #dee2e6;
+$gray-100: #f8f9fa;
+
+// Override Bootstrap color and state values — Thai Forest Tradition
+$brown-dark: #4E342E;   // deep jackfruit-dyed robe brown
+$brown-mid:  #795548;   // medium earthy brown (secondary)
+$primary: $brown-dark;
+$secondary: $brown-mid;
+
+// Accent colors — muted earthy palette
+$cyan: #6D9886;      // sage green (replaces vivid cyan)
+$orange: #A0785A;    // warm terracotta
+$success: #558B6E;   // muted forest green
+$danger: #B04B3F;    // muted clay red
+$warning: #C49A6C;   // warm sand
+$info: #607D8B;      // cool slate
+
+// Background colors
+$bg-dark: #2C2420;   // warm dark espresso
+$bg-light: #F9F8F6;  // off-white cream
+
+// Override Bootstrap default contrast ratio
+$min-contrast-ratio: 4;

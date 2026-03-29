@@ -1,0 +1,14 @@
+//
+// Masthead — Spacer variant
+// Used to provide an offset for the absolute-positioned navbar
+//
+
+.masthead-spacer {
+    position: relative;
+    // Use a CSS variable set by JS, with 57px as a fallback
+    padding-top: var(--nav-height, 57px); 
+    
+    @include media-breakpoint-up(lg) {
+        padding-top: var(--nav-height, 57px); 
+    }
+}

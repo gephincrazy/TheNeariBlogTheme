@@ -1,0 +1,91 @@
+/* Update the heading to look like a clickable button */
+.taxonomy-menu .accordion-button {
+  width: 100%;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between; /* Pushes the text and icon apart */
+  align-items: center;
+  transition: background-color 0.2s ease;
+}
+
+.taxonomy-menu .accordion-button:hover,
+.taxonomy-menu .accordion-button:focus {
+  background-color: #dde2e6;
+  outline: none;
+}
+
+/* Create the arrow icon using pure CSS */
+.taxonomy-menu .accordion-icon::after {
+  content: '\25BC'; /* Unicode down arrow */
+  font-size: 0.75rem;
+  color: #6c757d;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+/* Flip the arrow when expanded */
+.taxonomy-menu .accordion-button[aria-expanded="true"] .accordion-icon::after {
+  transform: rotate(-180deg);
+}
+
+/* Hide the content by default and set up the animation */
+.taxonomy-menu .accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+/* The class our JavaScript will toggle to show the content */
+.taxonomy-menu .accordion-content.is-open {
+  max-height: 1000px; /* An arbitrary large number to allow the transition to work */
+  transition: max-height 0.4s ease-in;
+}
+
+/* Split Style the section heading */
+
+/* Update the heading to look like a clickable button */
+.taxonomy-menu .accordion-button {
+  width: 100%;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between; /* Pushes the text and icon apart */
+  align-items: center;
+  transition: background-color 0.2s ease;
+}
+
+.taxonomy-menu .accordion-button:hover,
+.taxonomy-menu .accordion-button:focus {
+  background-color: #dde2e6;
+  outline: none;
+}
+
+/* Create the arrow icon using pure CSS */
+.taxonomy-menu .accordion-icon::after {
+  content: '\25BC'; /* Unicode down arrow */
+  font-size: 0.75rem;
+  color: #6c757d;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+/* Flip the arrow when expanded */
+.taxonomy-menu .accordion-button[aria-expanded="true"] .accordion-icon::after {
+  transform: rotate(-180deg);
+}
+
+/* Hide the content by default and set up the animation */
+.taxonomy-menu .accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+/* The class our JavaScript will toggle to show the content */
+.taxonomy-menu .accordion-content.is-open {
+  max-height: 1000px; /* An arbitrary large number to allow the transition to work */
+  transition: max-height 0.4s ease-in;
+}

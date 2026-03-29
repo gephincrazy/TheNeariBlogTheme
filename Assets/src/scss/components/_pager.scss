@@ -1,0 +1,45 @@
+//
+// Pager — Thai Forest Tradition palette
+//
+
+.pagination-neari {
+    gap: 0.125rem;
+
+    .page-item {
+        .page-link {
+            color: $primary;
+            background-color: $bg-light;
+            border-color: $gray-300;
+            border-radius: 0.25rem;
+            transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+
+            &:hover {
+                color: $white;
+                background-color: $secondary;
+                border-color: $secondary;
+            }
+        }
+
+        &.active .page-link {
+            color: $white;
+            background-color: $primary;
+            border-color: $primary;
+            pointer-events: none;
+        }
+
+        &.disabled .page-link {
+            color: $gray-500;
+            background-color: $bg-light;
+            border-color: $gray-300;
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        .page-link--gap {
+            color: $gray-500;
+            background-color: transparent;
+            border-color: transparent;
+            pointer-events: none;
+        }
+    }
+}

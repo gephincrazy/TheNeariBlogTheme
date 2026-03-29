@@ -1,0 +1,57 @@
+[
+  {
+    "copy": true,
+    "inputs": [
+      "Assets/dist/assets/**/*"
+    ],
+    "output": "wwwroot/assets/@"
+  },
+  {
+    "copy": true,
+    "inputs": [
+      "Assets/dist/assets/favicon.ico"
+    ],
+    "output": "wwwroot/favicon.ico"
+  },
+  {
+    "inputs": [
+      "Assets/dist/css/styles.css"
+    ],
+    "output": "wwwroot/css/styles.css"
+  },
+  {
+    "inputs": [ "Assets/src/scss/bootstrap-oc.scss" ],
+    "output": "wwwroot/css/bootstrap-oc.css"
+  },
+  {
+    "inputs": [
+      "Assets/dist/js/scripts.js"
+    ],
+    "output": "wwwroot/js/scripts.js"
+  },
+  {
+    "inputs": [
+      "Assets/dist/js/bootstrap.bundle.js"
+    ],
+    "output": "wwwroot/js/bootstrap.bundle.js"
+  },
+  {
+    "inputs": [
+      "Assets/dist/js/bootstrap.bundle.min.js"
+    ],
+    "output": "wwwroot/js/bootstrap.bundle.min.js"
+  },
+  {
+    "inputs": [
+      "Assets/dist/css/fontsgoogle.css"
+    ],
+    "output": "wwwroot/css/fontsgoogle.css"
+  },
+  {
+    "copy": true,
+    "inputs": [
+      "Assets/dist/fonts/*"
+    ],
+    "output": "wwwroot/fonts/@"
+  }
+]

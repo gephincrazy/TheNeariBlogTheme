@@ -1,0 +1,163 @@
+// 
+// Navbar
+// 
+
+// Global styling for the navbar - Neari Brand Style
+
+#mainNav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: $zindex-fixed;
+    border-bottom: 1px solid rgba($brown-mid, 0.25);
+    background: linear-gradient(135deg, rgba($bg-dark, 0.97) 0%, rgba($primary, 0.92) 100%);
+    font-family: $headings-font-family;
+    backdrop-filter: blur(10px);
+
+    .navbar-brand {
+        font-weight: $headings-font-weight;
+        color: $white;
+        text-shadow: 0 2px 4px rgba($bg-dark, 0.3);
+        
+        &:focus,
+        &:hover {
+            color: rgba($white, 0.75);
+            transform: scale(1.03);
+            transition: all 0.3s ease;
+        }
+    }
+
+    .navbar-toggler {
+        font-size: 0.75rem;
+        font-weight: $headings-font-weight;
+        padding: 0.75rem;
+        text-transform: uppercase;
+        border-color: rgba($white, 0.3);
+        color: $white;
+        
+        &:focus {
+            box-shadow: 0 0 0 0.2rem rgba($brown-mid, 0.3);
+        }
+    }
+
+    .navbar-nav {
+        >li.nav-item {
+            >a.nav-link {
+                font-size: 0.75rem;
+                font-weight: $headings-font-weight;
+                letter-spacing: 0.0625em;
+                text-transform: uppercase;
+                color: rgba($white, 0.9);
+                position: relative;
+                padding: 0.5rem 1rem;
+                
+                &::after {
+                    content: '';
+                    position: absolute;
+                    width: 0;
+                    height: 2px;
+                    bottom: 0;
+                    left: 50%;
+                    background: $brown-mid;
+                    transition: all 0.3s ease;
+                    transform: translateX(-50%);
+                }
+
+                &:focus,
+                &:hover {
+                    color: $white;
+                    
+                    &::after {
+                        width: 80%;
+                    }
+                }
+            }
+        }
+    }
+
+    // Desktop only styling for the navbar
+    @include media-breakpoint-up(lg) {
+        border-bottom: 1px solid rgba($brown-mid, 0.2);
+        background: linear-gradient(135deg, rgba($bg-dark, 0.82) 0%, rgba($primary, 0.72) 100%);
+
+        .navbar-brand {
+            color: $white;
+            
+            &:focus,
+            &:hover {
+                color: rgba($white, 0.75);
+            }
+        }
+
+        .navbar-nav {
+            >li.nav-item {
+                >a.nav-link {
+                    color: rgba($white, 0.9);
+                    
+                    &:focus,
+                    &:hover {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+
+    // Styling for the JS behavior of the navbar
+    @include media-breakpoint-up(lg) {
+        -webkit-transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        -moz-transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        -o-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+
+        &.is-fixed {
+            /* when the user scrolls down, we hide the header right above the viewport */
+            position: fixed;
+            top: -83px;
+            -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            -moz-transition: -moz-transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border-bottom: 2px solid rgba($primary, 0.2);
+            background: rgba($white, 0.95);
+            box-shadow: 0 4px 20px rgba($bg-dark, 0.1);
+
+            .navbar-brand {
+                color: $primary;
+                
+                &:focus,
+                &:hover {
+                    color: $secondary;
+                }
+            }
+
+            .navbar-nav {
+                >li.nav-item {
+                    >a {
+                        color: $primary;
+                        
+                        &:focus,
+                        &:hover {
+                            color: $secondary;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.is-visible {
+            /* if the user changes the scrolling direction, we show the header */
+            -webkit-transform: translate3d(0, 100%, 0);
+            -moz-transform: translate3d(0, 100%, 0);
+            -ms-transform: translate3d(0, 0, 0);
+            -o-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+        }
+    }
+}
